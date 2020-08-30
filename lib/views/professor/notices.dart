@@ -58,12 +58,18 @@ class _NoticesState extends State<Notices> {
                             ])),
                     Padding(
                         padding: EdgeInsets.only(bottom: 10, top: 10, left: 15),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(e["period"], style: TextStyle(
-                                  color:Colors.white,fontSize: 15))
-                            ])),
+                        child: Container(
+
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(e["period"],
+                                      maxLines: 100,
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        color: Colors.white,
+                                      ))
+                                ]))),
                     Expanded(
                       child: Padding(
                           padding: EdgeInsets.only(bottom: 10, right: 10),

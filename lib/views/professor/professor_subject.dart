@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import  './grades/main_grades.dart';
+import './grades/main_grades.dart';
 import 'package:educa_zen/views/professor/homeworks.dart';
+import 'notices.dart';
+import 'students_list.dart';
 
 class professor_Subject extends StatefulWidget {
   @override
@@ -13,10 +15,10 @@ class _professor_SubjectState extends State<professor_Subject> {
   int _selectedIndex = 0;
 
   static List<Widget> _widgetOptions = <Widget>[
-  main_grades(),
+    main_grades(),
     homeworks(),
-  Text("Text 1"),
-    Text("Text 1"),
+    Notices(),
+    students_list(),
   ];
 
   void _onItemTapped(int index) {
@@ -76,16 +78,22 @@ class _professor_SubjectState extends State<professor_Subject> {
                               Text(e["name"],
                                   style: TextStyle(
                                       fontSize: 20,
-                                      color:Colors.white,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.bold))
                             ])),
                     Padding(
                         padding: EdgeInsets.only(bottom: 10, top: 10, left: 15),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(e["period"], style: TextStyle(fontSize: 15,color:Colors.white,))
-                            ])),
+                        child: Container(
+
+                            child: Column(
+                                children: [
+                              Text(e["period"],
+                                  maxLines: 100,
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.white,
+                                  ))
+                            ]))),
                     Expanded(
                       child: Padding(
                           padding: EdgeInsets.only(bottom: 10, right: 10),
@@ -98,7 +106,7 @@ class _professor_SubjectState extends State<professor_Subject> {
                                         " alumnos inscritos",
                                     style: TextStyle(
                                         fontSize: 20,
-                                        color:Colors.white,
+                                        color: Colors.white,
                                         fontWeight: FontWeight.bold))
                               ])),
                     ),
@@ -115,7 +123,6 @@ class _professor_SubjectState extends State<professor_Subject> {
     var media = MediaQuery.of(context).size;
 
     return Scaffold(
-
       appBar: AppBar(
           backgroundColor: Colors.white,
           title: Row(
@@ -128,7 +135,7 @@ class _professor_SubjectState extends State<professor_Subject> {
               ),
             ],
           )),
-        body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
+      body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
         showUnselectedLabels: true,
