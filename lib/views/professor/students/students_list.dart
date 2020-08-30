@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'student_info.dart';
+
 class students_list extends StatefulWidget {
   @override
   _students_list createState() => _students_list();
@@ -46,7 +48,15 @@ class _students_list extends State<students_list> {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        RaisedButton(onPressed: () => {}, child: Text("Ver >"))
+                        RaisedButton(
+                            color:Colors.blue,
+                            onPressed: () => {{Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => student_info()),
+                            )}},
+                            child: Text("Ver >",style: TextStyle(color:Colors.white)))
+
                       ]))
             ],
           ))
@@ -60,7 +70,7 @@ class _students_list extends State<students_list> {
     var media = MediaQuery.of(context).size;
 
     return Scaffold(
-       
+
         body: Center(
             child: SingleChildScrollView(
                 child: Column(

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import './grades/main_grades.dart';
 import 'package:educa_zen/views/professor/homeworks.dart';
 import 'notices.dart';
-import 'students_list.dart';
+import 'package:educa_zen/views/professor/students/students_list.dart';
 
 class professor_Subject extends StatefulWidget {
   @override
