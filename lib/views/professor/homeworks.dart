@@ -88,13 +88,19 @@ class _homeworks extends State<homeworks> with SingleTickerProviderStateMixin {
                                         fontWeight: FontWeight.bold))
                               ])),
                     ),
-                    RaisedButton(
-                      onPressed: ()=>{},
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                              padding: EdgeInsets.only( right: 10),
+                              child: RaisedButton(
+                                onPressed: ()=>{},
                                 child: Text("Ver"),
                               )
+                          ),
 
-
-
+                        ]
+                    )
                   ],
                 )),
               ))))

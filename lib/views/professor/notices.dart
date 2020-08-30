@@ -16,20 +16,19 @@ class _NoticesState extends State<Notices> {
     ));
     var advisingSchedule = [
       {
-        "name": "Matematicas I",
-        "period": "AGO-DIC 2020",
-        "current_students": 13
+        "name": "Recordatorio de tareas",
+        "period": "Recuerden subir sus tareas a tiempo",
+        "current_students": "1/sep"
       },
       {
-        "name": "Matematicas II",
-        "period": "AGO-DIC 2020",
-        "current_students": 23
+        "name": "Dudas sobre tareas",
+        "period": "Si tienen dudas de tareas pueden enviarme un mensaje directo",
+        "current_students": "30/ago"
       },
-      {"name": "Español", "period": "AGO-DIC 2020", "current_students": 19},
       {
-        "name": "Ciencias Naturales",
-        "period": "AGO-DIC 2020",
-        "current_students": 19
+        "name": "Inscripciones",
+        "period": "Recuerden que las inscripciones empiezan a partir del 15 de agosto",
+        "current_students": "01/ago"
       }
     ];
 //    advisingSchedule.forEach((element) {print(element);});
@@ -53,6 +52,8 @@ class _NoticesState extends State<Notices> {
                               Text(e["name"],
                                   style: TextStyle(
                                       fontSize: 20,
+
+                                      color:Colors.white,
                                       fontWeight: FontWeight.bold))
                             ])),
                     Padding(
@@ -60,7 +61,8 @@ class _NoticesState extends State<Notices> {
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text(e["period"], style: TextStyle(fontSize: 15))
+                              Text(e["period"], style: TextStyle(
+                                  color:Colors.white,fontSize: 15))
                             ])),
                     Expanded(
                       child: Padding(
@@ -69,11 +71,11 @@ class _NoticesState extends State<Notices> {
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                Text(
-                                    e["current_students"].toString() +
-                                        " alumnos inscritos",
+                                Text("Fecha: "+
+                                    e["current_students"],
                                     style: TextStyle(
                                         fontSize: 20,
+                                        color:Colors.white,
                                         fontWeight: FontWeight.bold))
                               ])),
                     ),
