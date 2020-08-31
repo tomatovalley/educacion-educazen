@@ -18,3 +18,33 @@ Ingresar a la carpeta y ejecutar Flutter
 cd educacion-educazen
 flutter run
 ```
+
+## Vistas
+
+### Login 
+
+![EducaZenLogo](/images/app_images/login.png)
+
+## Profesor
+
+### Materias del profesor
+![EducaZenLogo](/images/app_images/professor_subjects.PNG)
+
+### Calificaciones de una materia
+![EducaZenLogo](/images/app_images/professor_grades.PNG)
+
+### Calificaciones del parcial
+![EducaZenLogo](/images/app_images/professor_subject_grade.PNG)
+
+### Tareas de una materia
+![EducaZenLogo](/images/app_images/professor_homeworks.PNG)
+
+### Avisos de una materia
+![EducaZenLogo](/images/app_images/professor_notices.PNG)
+
+### Estudiantes de la materia
+![EducaZenLogo](/images/app_images/professor_students.PNG)
+
+### Informacion de un estudiante
+![EducaZenLogo](/images/app_images/professor_student_info.PNG)
+
